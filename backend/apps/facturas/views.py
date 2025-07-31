@@ -9,7 +9,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 from .serializers import *
 
-class facturasViewset(viewsets.ModelViewSet):
+class FacturasViewset(viewsets.ModelViewSet):
 
     queryset = facturas.objects.all()
     serializer_class = FacturasSerializer

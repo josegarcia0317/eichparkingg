@@ -19,12 +19,12 @@ from django.urls import path, include
 from facturas import views as auth_views
 from hora_parking import views as auth_views
 from rol import views as auth_views
-from vehiculo views as auth_views
+from vehiculo import views as auth_views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('facturas/', auth_views.facturasView.as_view(template_name='templates/facturas.html'),
 name='facturas'),
     path('hora_parking/', auth_views.hora_parkingView.as_view(template_name='templates/hora_parking.html'),
